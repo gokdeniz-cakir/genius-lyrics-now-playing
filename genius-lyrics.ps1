@@ -1,6 +1,6 @@
 # genius-lyrics.ps1
 # Open Genius search page for the currently playing track (Spotify, Apple Music, etc.)
-# Must be run in Windows PowerShell 5.1 for windows media api
+# Must be run in Windows PowerShell 5.1
 
 if ($PSVersionTable.PSEdition -eq 'Core') {
     Write-Host "This script requires Windows PowerShell 5.1, not PowerShell Core/7." -ForegroundColor Red
@@ -69,6 +69,16 @@ try {
         exit 1
     }
     
+	# If artist ends in VEVO, parse from title
+if ($artist -like '*VEVO') {
+    $parts = $title -split ' - ', 2
+    if ($parts.Count -eq 2) {
+        $artist = $parts[0]
+        $title = $parts[1]
+    }
+}
+	
+	
     # Clean up artist name - remove album info after em dash, hyphen, or parentheses
     $cleanArtist = $artist -replace '\s*[—–-]\s*.*$', '' -replace '\s*\(.*$', ''
     
