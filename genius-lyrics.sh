@@ -16,7 +16,7 @@ output=$(osascript \
 title=$(echo "$output" | sed 's/ — .*//')
 artist=$(echo "$output" | sed 's/.* — //')
 
-# If artist ends in VEVO, it's probably YouTube - try to parse artist from title
+# If artist ends in "VEVO", it's probably YouTube - try to parse artist from title
 if [[ "$artist" == *VEVO ]]; then
     # Title is usually "Artist - Song"
     artist=$(echo "$title" | sed 's/ *-.*//')
@@ -48,4 +48,5 @@ if echo "$response" | grep -qi "Burrr\|Page not found"; then
 else
     echo "Opening direct URL..."
     open "$direct_url"
+
 fi
