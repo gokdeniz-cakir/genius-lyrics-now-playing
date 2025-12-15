@@ -1,8 +1,8 @@
 # genius-lyrics-now-playing
 
-Requires Windows PowerShell 5.1 (doesnt work with PowerShell 7)
-
 A small PowerShell script that reads what you are playing from Windows Media Transport Controls API and opens the Genius page for its lyrics.
+
+Requires Windows PowerShell 5.1 (doesnt work with PowerShell 7)
 
 I recommend creating a shortcut file and setting a specific key shortcuts to open it directly. 
 
