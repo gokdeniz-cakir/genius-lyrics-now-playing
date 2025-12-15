@@ -20,7 +20,7 @@ Select a combination of keys you like and you are ready to go!
 
 ## macOS
 
-Requires macOS 15.4+ (uses private MediaRemote framework)
+Requires macOS 15.4+ 
 
 Make the script executable:
 ```bash
