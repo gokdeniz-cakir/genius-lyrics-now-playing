@@ -1,6 +1,6 @@
 # genius-lyrics-now-playing
 
-A script that reads what you are playing from system media APIs and opens the Genius page for its lyrics.
+A script that reads what you are playing from system media APIs and opens the Genius page for its lyrics. (Fallsback to search on the Genius site if it cant find a valid page)
 
 Works with any app that reports to system media controls (Spotify, Apple Music, YouTube in browser, etc.)
 
